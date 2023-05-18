@@ -9,5 +9,7 @@ Configure the dot env package and create a .env file from the sample.env file. E
 
 
 ## To Run the Test
-`npx playwright`
+`npx playwright test`
 
+## To view the test report after test run
+`npx playwright show-report`
