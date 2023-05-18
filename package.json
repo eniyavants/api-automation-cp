@@ -1,0 +1,19 @@
+{
+  "name": "cp-assessment",
+  "version": "1.0.0",
+  "description": "API automation testing framework to test the api's for todo list application using playwright",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "api",
+    "playwright"
+  ],
+  "author": "Eni Selvi",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
