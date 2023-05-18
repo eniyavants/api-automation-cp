@@ -27,7 +27,7 @@ test.beforeAll(async () => {
 test("Add new Todo item into the list", async () => {
   const result = await PostPositiveResponse(apiPaths.TODO_ITEMS, randomText);
   //Assertion
-  expect(result.json()).toBeTruthy();
+  expect(await result.json()).toBeTruthy();
 });
 
 /**
@@ -39,8 +39,8 @@ test("Error message is displayed when payload is wrong", async () => {
   const result = await PostNegativeResponse(apiPaths.TODO_ITEMS);
 
   //Assertion
-  expect(result.title).toContain("One or more validation errors occurred.");
-  expect(result.errors.Description).toContain(
+  expect(await result.title).toContain("One or more validation errors occurred.");
+  expect(await result.errors.Description).toContain(
     "Description field can not be empty"
   );
 });
@@ -54,7 +54,7 @@ test("Adding duplicate item into the Todo list", async () => {
   const result = await PostConflictResponse(apiPaths.TODO_ITEMS, randomText);
 
   //Assertion
-  expect(result).toContain("A todo item with description already exists");
+  expect(await result).toContain("A todo item with description already exists");
 });
 
 /**
